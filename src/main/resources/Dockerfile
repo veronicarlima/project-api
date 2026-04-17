@@ -8,4 +8,5 @@ FROM eclipse-temurin:21-jre-alpine
 COPY --from=build /build/target/*.jar /opt/app.jar
 CMD["java", "-jar", "/opt/app.jar"]
 
-# docker run -d --rm --name pg-docker -e POSTGRES_PASSWORD=postgres -e POSTGRES_DB=local -p 5432:5432 postgres:17.2
+# docker run -d --rm --name docker-database -e POSTGRES_PASSWORD=postgres -e POSTGRES_DB=local -p 5432:5432 postgres:17.2
+#psql - U postgres -d local
