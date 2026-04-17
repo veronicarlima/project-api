@@ -1,20 +1,23 @@
-package com.project.apirest.entity;
+package com.project.apirest.data.entity;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.springframework.data.annotation.Id;
+
+import java.util.UUID;
 
 @Data
 @Entity
 @NoArgsConstructor
+@AllArgsConstructor
 @Table(name="CLIENT")
 public class Client {
 
     @Id
-    private Long id;
+    @GeneratedValue(strategy = GenerationType.UUID)
+    @Column(name = "CLIENT_ID")
+    private UUID clientId;
 
     @Column(name = "CLIENT_NAME")
     private String nameClient;
@@ -24,8 +27,6 @@ public class Client {
 
     @Column(name = "CLIENT_DETAILS")
     private String observation;
-
-
 
 }
 

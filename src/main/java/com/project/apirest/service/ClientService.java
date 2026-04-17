@@ -1,10 +1,13 @@
 package com.project.apirest.service;
 
-import com.project.apirest.entity.Client;
-import com.project.apirest.repository.ClientRepository;
-import org.hibernate.query.Page;
+import com.project.apirest.data.entity.Client;
+import com.project.apirest.data.repository.ClientRepository;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 @Service
 public class ClientService {
@@ -16,7 +19,11 @@ public class ClientService {
     }
 
     public Page<Client> getAllClients(int pageNumber, int pageSize){
-        Pageable pageable = Pageable.ofSize(pageNumber,pageSize);
+        Pageable pageable = PageRequest.of(pageNumber,pageSize);
         return repository.findAll(pageable);
+    }
+
+    public List<Client> getAll() {
+        return repository.findAll();
     }
 }
