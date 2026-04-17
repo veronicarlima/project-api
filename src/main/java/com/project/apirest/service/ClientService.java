@@ -12,18 +12,24 @@ import java.util.List;
 @Service
 public class ClientService {
 
-    private ClientRepository repository;
+    private final ClientRepository repository;
 
     public ClientService(ClientRepository repository) {
         this.repository = repository;
     }
 
-    public Page<Client> getAllClients(int pageNumber, int pageSize){
+    public List<Client> getAll() {
+        return repository.findAll();
+    }
+
+    public Page<Client> getClientPage(int pageNumber, int pageSize){
         Pageable pageable = PageRequest.of(pageNumber,pageSize);
         return repository.findAll(pageable);
     }
 
-    public List<Client> getAll() {
-        return repository.findAll();
+    public Page<Client> getClientSpecifyPage(int pageNumber, int pageSize){
+        Pageable pageable = PageRequest.of(pageNumber, pageSize);
+        return  repository.getClientSpecify(pageable);
     }
+
 }
