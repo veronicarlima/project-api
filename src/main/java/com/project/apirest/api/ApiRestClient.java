@@ -24,6 +24,12 @@ public class ApiRestClient {
         return ResponseEntity.ok(response);
     }
 
+    @GetMapping("/{id}")
+    public ResponseEntity<Client> getClientId(@PathVariable Long id){
+        Client clientId = service.getClientId(id);
+        return ResponseEntity.ok(clientId);
+    }
+
     @GetMapping("pageClient")
     public ResponseEntity<Page<Client>> getAllClientsPagination(@RequestParam(defaultValue = "0") int page,
                                                                  @RequestParam(defaultValue = "10" ) int size){
@@ -36,6 +42,11 @@ public class ApiRestClient {
                                                                 @RequestParam(defaultValue = "10" ) int size){
         Page<Client> response = service.getClientSpecifyPage(page,size);
         return ResponseEntity.ok(response);
+    }
+
+    @PostMapping
+    public ResponseEntity<Client> createNewClient(@RequestBody Client client){
+        return ResponseEntity.ok(service.saveNewClient(client));
     }
 
 }

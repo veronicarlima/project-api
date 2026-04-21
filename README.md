@@ -43,3 +43,8 @@ Use method : GET
 Name: pagination-client                       
 URL : http://localhost:8081/api/client/pageClient?page=2&size=2                        
 Description : Return with filter Pagination, URL with already the Params : Page and Size 
+
+## References 
+
+Pages that support all the content with this project 
+- (Context about Global Expection Handler)[https://www.springjavalab.com/2025/05/spring-boot-global-exception-handling.html]
