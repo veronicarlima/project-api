@@ -58,4 +58,4 @@ Body:
 ## References 
 
 Pages that support all the content with this project 
-- (Context about Global Expection Handler)[https://www.springjavalab.com/2025/05/spring-boot-global-exception-handling.html]
+- [Context about Global Expection Handler](https://www.springjavalab.com/2025/05/spring-boot-global-exception-handling.html)
