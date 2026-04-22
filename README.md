@@ -24,7 +24,7 @@ Usually I put my Docker file in resources together with properties.properties.
 
 #### 3 Step - Acess the docker desktop, and go to the Exec and run the command : 
 
-#psql - U postgres -d local" 
+#psql -U postgres -d local" 
 
 #### 4 Step - You need to have the data already done for this step, because you just paste and execute
 
@@ -43,6 +43,17 @@ Use method : GET
 Name: pagination-client                       
 URL : http://localhost:8081/api/client/pageClient?page=2&size=2                        
 Description : Return with filter Pagination, URL with already the Params : Page and Size 
+
+Use method : POST 
+Name : save-new-client
+URL: localhost:8081/api/client
+Body: 
+{
+"clientName":"Andrea",
+"address":"St. Clair Ave - 997852",
+"observation":"Housekeeping"
+}
+
 
 ## References 
 

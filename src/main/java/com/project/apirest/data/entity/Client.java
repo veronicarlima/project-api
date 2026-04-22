@@ -20,7 +20,7 @@ public class Client {
     private UUID clientId;
 
     @Column(name = "CLIENT_NAME")
-    private String nameClient;
+    private String clientName;
 
     @Column(name = "CLIENT_ADDRESS")
     private String address;
