@@ -1,15 +1,27 @@
-# project-api
-Everything Rest Api 
+# Project Springboot REST API Database & Docker 
 
-Objective of this project to represents a Sample of funcionalitys that you can use in the project or get some skelleton to guide in the next projects. 
+Objective of this project to represents a Sample project, that you can use just like a skelleton to guide in the next projects. 
 
-You can find in this project : 
+#### This project envolving the simple concepts such as : 
 
 - GET methods
 - Integration with Postgres Docker
-- LogBack
 - Pagination
 - Request Postman to testing
+
+You can find dependencys: 
+- Springboot Web 
+
+#### Modules to support : 
+
+- Logback 
+- 
+
+
+#### Description Scope Project 
+
+Sample API to used REST endpoints to connect with database using Postgres in Docker. This integration was applying pagination to return data.  
+
 
 ### Configurate Docker to use DataBase
 
